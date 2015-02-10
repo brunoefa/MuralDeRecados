@@ -1,0 +1,20 @@
+.carousel-caption{
+    padding-bottom: 115px;
+}
+.carousel-caption h1{
+    font-size: 90px;
+}
+.form-btn-divider{
+    padding-top: 10px;
+}
+
+.btn-form {
+    text-align: right;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.btn-form button{
+    width: 150px;
+    margin-left: 20px;
+}
