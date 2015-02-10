@@ -1,1 +1,1 @@
-Hello World
+<?php header('Location:view/listagem.html'); ?>
