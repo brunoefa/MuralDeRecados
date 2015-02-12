@@ -1,7 +1,7 @@
 <?php 
     $titulo = "Mural de recados";
     $botao = "Deixe seu recado agora";
-    $url = "#";
+    $url = "form.php";
     include 'meta.php';
     include 'cabecalho.php'; 
 ?>

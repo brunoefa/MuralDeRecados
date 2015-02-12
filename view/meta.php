@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Bruno Eustáquio">
 
-    <title>Mural de Recados</title>
+    <title><?php echo $titulo ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
