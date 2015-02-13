@@ -1,53 +1,26 @@
 <?php 
     $titulo = "Mural de recados";
     $botao = "Deixe seu recado agora";
-    $url = "form.php";
-    include 'meta.php';
-    include 'cabecalho.php'; 
+    $url = "recado.php?action=criar";
+    include '../view/meta.php';
+    include '../view/cabecalho.php'; 
 ?>
+    
+    <?php foreach ($listaRecados as $recado): ?>
 
     <div class="container marketing">
 
       <div class="row featurette">
         <div class="col-md-12">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span></a> 355 - Bruno Eustáquio
+          <h2 class="featurette-heading"><?php echo $recado->titulo; ?></span></h2>
+          <p class="lead"><?php echo $recado->texto; ?></p>
+          <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span></a> <?php echo $recado->likes; ?> - <?php echo $recado->autor; ?>
         </div>
       </div>
-
-      <hr class="featurette-divider">
       
-      <div class="row featurette">
-        <div class="col-md-12">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span></a> 34 - Manoel Rosa
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-      
-      <div class="row featurette">
-        <div class="col-md-12">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span></a> 44 - Fernando Pessoa
-        </div>
-      </div>
-
-      <hr class="featurette-divider">     
-
-      <div class="row featurette">
-        <div class="col-md-12">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span></a> 12 - Cecília Meireles
-        </div>
-      </div>
-
-      <hr class="featurette-divider">      
+      <hr class="featurette-divider">  
+    <?php endforeach ?>
       
     </div><!-- /.container -->
     
-<?php include 'rodape.php'; ?>
+<?php include '../view/rodape.php'; ?>

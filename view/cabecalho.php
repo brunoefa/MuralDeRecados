@@ -6,7 +6,7 @@
       <!-- Indicators -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img src="img/cover.jpg" alt="First slide">
+          <img src="../view/img/cover.jpg" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
               <h1><?php echo $titulo ?></h1>

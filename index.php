@@ -1,1 +1,1 @@
-<?php header('Location:view/listagem.html'); ?>
+<?php header('Location:controller/recado.php'); ?>
