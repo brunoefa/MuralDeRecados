@@ -11,6 +11,8 @@ if ($action == "criar") {
     criar();
 } else if ($action == "salvar") {
     salvar();
+} else if ($action == "curtir") {
+    curtir();
 } else {
     listar();
 }
@@ -19,16 +21,20 @@ function criar() {
     require_once '../view/form.php';
 }
 
+function curtir() {
+    // TODO CURTIR
+}
+
 function listar() {
     $recadoDao = new RecadoDao();
-    $listaRecados = $recadoDao->getLista(10);
+    $listaRecados = $recadoDao->findAll();
     require_once '../view/list.php';
 }
 
 function salvar() {
     $recado = getParameters();
     $recadoDao = new RecadoDao();
-    $recadoDao->salvar($recado);
+    $recadoDao->save($recado);
     listar();
 }
 

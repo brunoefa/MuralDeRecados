@@ -11,7 +11,7 @@ class Recado {
     public $autor;
     public $likes;
 
-    function __construct($titulo, $texto, $autor, $likes = 0) {
+    public function __construct($titulo, $texto, $autor, $likes = 0) {
         $this->titulo = $titulo;
         $this->texto = $texto;
         $this->autor = $autor;

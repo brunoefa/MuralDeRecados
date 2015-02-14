@@ -6,15 +6,15 @@
     include '../view/cabecalho.php'; 
 ?>
     
-    <?php foreach ($listaRecados as $recado): ?>
+    <?php foreach ($listaRecados as $r): ?>
 
     <div class="container marketing">
 
       <div class="row featurette">
         <div class="col-md-12">
-          <h2 class="featurette-heading"><?php echo $recado->titulo; ?></span></h2>
-          <p class="lead"><?php echo $recado->texto; ?></p>
-          <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span></a> <?php echo $recado->likes; ?> - <?php echo $recado->autor; ?>
+          <h2 class="featurette-heading"><?php echo $r->titulo; ?></span></h2>
+          <p class="lead"><?php echo $r->texto; ?></p>
+          <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span></a> <?php echo $r->likes; ?> - <?php echo $r->autor; ?>
         </div>
       </div>
       
