@@ -6,10 +6,9 @@
     include '../view/cabecalho.php'; 
 ?>
     
-    <?php foreach ($listaRecados as $r): ?>
-
     <div class="container marketing">
-
+    
+    <?php foreach ($listaRecados as $r): ?>
       <div class="row featurette">
         <div class="col-md-12">
           <h2 class="featurette-heading"><?php echo $r->titulo; ?></span></h2>

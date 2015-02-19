@@ -11,13 +11,14 @@ class Recado {
     public $autor;
     public $likes;
 
-    public function __construct($titulo, $texto, $autor, $likes = 0) {
+    public function __construct($id, $titulo, $texto, $autor, $likes = 0) {
+        $this->id = $id;
         $this->titulo = $titulo;
         $this->texto = $texto;
         $this->autor = $autor;
         $this->likes = $likes;
     }
-
+    
     public function toString() {
         return $this->id . ' ' .
                 $this->titulo . ' ' .
