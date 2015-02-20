@@ -5,15 +5,15 @@
     include '../view/meta.php';
     include '../view/cabecalho.php'; 
 ?>
-    
-    <div class="container marketing">
+
+<div class="container marketing">
     
     <?php foreach ($listaRecados as $r): ?>
       <div class="row featurette">
         <div class="col-md-12">
           <h2 class="featurette-heading"><?php echo $r->titulo; ?></span></h2>
           <p class="lead"><?php echo $r->texto; ?></p>
-          <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span></a> <?php echo $r->likes; ?> - <?php echo $r->autor; ?>
+          <a href="recado.php?action=curtir&id=<?php echo $r->id; ?>"><span class="glyphicon glyphicon-thumbs-up"></span></a> <?php echo $r->likes; ?> - <?php echo $r->autor; ?>
         </div>
       </div>
       

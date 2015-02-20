@@ -12,7 +12,6 @@ class RecadoDao {
     }
 
     public function findAll() {
-        createConnection();
         $query = "select * from recado";
         $result = mysql_query($query);
         
@@ -31,11 +30,14 @@ class RecadoDao {
     }
     
     public function save($recado) {
-        // CREATE
+        $query = "insert into recado (titulo, texto, autor) 
+            values ('$recado->titulo', '$recado->texto', '$recado->autor');";
+        return mysql_query($query);
     }    
     
     public function like($id){
-        // INCREMENTAR REGISTRO NO BANCO DE DADOS
+        $query = "update recado set likes = likes + 1 where id = '$id';";
+        return mysql_query($query);
     }
 }
 

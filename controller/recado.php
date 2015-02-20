@@ -22,7 +22,10 @@ function criar() {
 }
 
 function curtir() {
-    // TODO CURTIR
+    $recado = getParameters();
+    $recadoDao = new RecadoDao();
+    $recadoDao->like($recado->id);
+    listar();
 }
 
 function listar() {
@@ -39,10 +42,16 @@ function salvar() {
 }
 
 function getParameters() {
-    $titulo = $_REQUEST['titulo'];
-    $texto = $_REQUEST['texto'];
-    $autor = $_REQUEST['autor'];
-    return new Recado($titulo, $texto, $autor);
+    $id = getParameter('id');
+    $titulo = getParameter('titulo');
+    $texto = getParameter('texto');
+    $autor = getParameter('autor');
+    $likes = getParameter('likes');
+    return new Recado($id, $titulo, $texto, $autor, $likes);
+}
+
+function getParameter($parameter){
+    return array_key_exists( $parameter, $_REQUEST) ? $_REQUEST[$parameter] : NULL;
 }
 
 ?>
