@@ -13,12 +13,21 @@ if ($action == "criar") {
     salvar();
 } else if ($action == "curtir") {
     curtir();
+} else if ($action == "excluir") {
+    excluir();
 } else {
     listar();
 }
 
 function criar() {
     require_once '../view/form.php';
+}
+
+function excluir() {
+    $recado = getParameters();
+    $recadoDao = new RecadoDao();
+    $recadoDao->excluir($recado->id);
+    listar();
 }
 
 function curtir() {

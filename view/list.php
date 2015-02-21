@@ -13,6 +13,7 @@
         <div class="col-md-12">
           <h2 class="featurette-heading"><?php echo $r->titulo; ?></span></h2>
           <p class="lead"><?php echo $r->texto; ?></p>
+          <a href="recado.php?action=excluir&id=<?php echo $r->id; ?>"><span class="glyphicon glyphicon-trash"></span></a>
           <a href="recado.php?action=curtir&id=<?php echo $r->id; ?>"><span class="glyphicon glyphicon-thumbs-up"></span></a> <?php echo $r->likes; ?> - <?php echo $r->autor; ?>
         </div>
       </div>

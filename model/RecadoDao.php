@@ -39,6 +39,11 @@ class RecadoDao {
         $query = "update recado set likes = likes + 1 where id = '$id';";
         return mysql_query($query);
     }
+    
+    public function excluir($id){
+        $query = "delete from recado where id = '$id';";
+        return mysql_query($query);
+    }
 }
 
 ?>
